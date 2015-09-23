@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SetupFontViewController.h"
 
 @interface ViewController ()
 
@@ -23,6 +24,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+//#pragma mark - Navigation
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([segue.destinationViewController isKindOfClass:[SetupFontViewController class]]) {
+//        SetupFontViewController *Vc = segue.destinationViewController;
+//        Vc.fontName = [];
+//    }
+// 
+//}
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -59,6 +69,20 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 60;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    SetupFontViewController *setupVC = [storyboard instantiateViewControllerWithIdentifier:@"SetupFontViewController"];
+    
+    NSString *failyName = [[UIFont familyNames] objectAtIndex:indexPath.section];
+    
+    NSString *fontName = [[UIFont fontNamesForFamilyName:failyName] objectAtIndex:indexPath.row];
+    setupVC.fontName = fontName;
+    
+    [self.navigationController pushViewController:setupVC animated:YES];
 }
 
 
