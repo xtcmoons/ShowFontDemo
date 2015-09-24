@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B4A9B551BB4481D007D187C /* StorageFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A9B541BB4481D007D187C /* StorageFont.m */; settings = {ASSET_TAGS = (); }; };
+		7B4A9B581BB44D57007D187C /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A9B571BB44D57007D187C /* UIColor+Hex.m */; settings = {ASSET_TAGS = (); }; };
+		7B4A9B5B1BB454AA007D187C /* collectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A9B5A1BB454AA007D187C /* collectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7B76C3701BB3005000269089 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B76C36F1BB3005000269089 /* main.m */; };
 		7B76C3731BB3005000269089 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B76C3721BB3005000269089 /* AppDelegate.m */; };
 		7B76C3761BB3005000269089 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B76C3751BB3005000269089 /* ViewController.m */; };
@@ -36,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B4A9B531BB4481D007D187C /* StorageFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageFont.h; sourceTree = "<group>"; };
+		7B4A9B541BB4481D007D187C /* StorageFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageFont.m; sourceTree = "<group>"; };
+		7B4A9B561BB44D57007D187C /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		7B4A9B571BB44D57007D187C /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		7B4A9B591BB454AA007D187C /* collectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = collectionViewController.h; sourceTree = "<group>"; };
+		7B4A9B5A1BB454AA007D187C /* collectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = collectionViewController.m; sourceTree = "<group>"; };
 		7B76C36B1BB3005000269089 /* ShowFontDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowFontDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B76C36F1BB3005000269089 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7B76C3711BB3005000269089 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,6 +119,12 @@
 				7B76C3751BB3005000269089 /* ViewController.m */,
 				7B76C3A11BB3067500269089 /* SetupFontViewController.h */,
 				7B76C3A21BB3067500269089 /* SetupFontViewController.m */,
+				7B4A9B591BB454AA007D187C /* collectionViewController.h */,
+				7B4A9B5A1BB454AA007D187C /* collectionViewController.m */,
+				7B4A9B531BB4481D007D187C /* StorageFont.h */,
+				7B4A9B541BB4481D007D187C /* StorageFont.m */,
+				7B4A9B561BB44D57007D187C /* UIColor+Hex.h */,
+				7B4A9B571BB44D57007D187C /* UIColor+Hex.m */,
 				7B76C3771BB3005000269089 /* Main.storyboard */,
 				7B76C37A1BB3005000269089 /* Assets.xcassets */,
 				7B76C37C1BB3005000269089 /* LaunchScreen.storyboard */,
@@ -276,7 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B4A9B5B1BB454AA007D187C /* collectionViewController.m in Sources */,
 				7B76C3761BB3005000269089 /* ViewController.m in Sources */,
+				7B4A9B581BB44D57007D187C /* UIColor+Hex.m in Sources */,
+				7B4A9B551BB4481D007D187C /* StorageFont.m in Sources */,
 				7B76C3731BB3005000269089 /* AppDelegate.m in Sources */,
 				7B76C3701BB3005000269089 /* main.m in Sources */,
 				7B76C3A31BB3067500269089 /* SetupFontViewController.m in Sources */,

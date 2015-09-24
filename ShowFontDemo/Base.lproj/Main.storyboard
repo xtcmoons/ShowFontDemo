@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B17c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7qr-S5-oyB">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
@@ -54,6 +55,59 @@
             </objects>
             <point key="canvasLocation" x="1163" y="414"/>
         </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="WMM-0X-Sai">
+            <objects>
+                <tableViewController storyboardIdentifier="collectionViewController" id="kOd-h2-qDD" customClass="collectionViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3OR-ZC-tmK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellID" textLabel="TLx-pr-grn" detailTextLabel="YEV-A3-2Kv" style="IBUITableViewCellStyleSubtitle" id="zBe-XS-NNz">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zBe-XS-NNz" id="egv-FH-iRf">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TLx-pr-grn">
+                                            <rect key="frame" x="15" y="5" width="32" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YEV-A3-2Kv">
+                                            <rect key="frame" x="15" y="25" width="41" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <segue destination="bsz-3A-9eE" kind="push" trigger="accessoryAction" id="48e-hg-rEN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kOd-h2-qDD" id="eqr-Pa-VU6"/>
+                            <outlet property="delegate" destination="kOd-h2-qDD" id="0KL-mV-the"/>
+                        </connections>
+                    </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n5Z-ss-PRd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2505" y="414"/>
+        </scene>
         <!--Setup Font View Controller-->
         <scene sceneID="52r-zJ-nmU">
             <objects>
@@ -87,6 +141,29 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuT-zd-oAL">
+                                <rect key="frame" x="520" y="84" width="70" height="60"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="1gK-8n-Ld5"/>
+                                    <constraint firstAttribute="height" constant="60" id="hBA-Wq-DNg"/>
+                                </constraints>
+                                <state key="normal" title="收藏"/>
+                                <state key="selected" title="取消收藏"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入颜色的颜色值" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3K8-ol-hec">
+                                <rect key="frame" x="15" y="92" width="246" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="246" id="HiV-7v-Kck"/>
+                                    <constraint firstAttribute="height" constant="30" id="QIC-1O-a4V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bsz-3A-9eE" id="7nF-vD-9Mg"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -97,15 +174,21 @@
                             <constraint firstAttribute="trailing" secondItem="F79-oK-chE" secondAttribute="trailing" constant="10" id="NbK-Dx-Jpa"/>
                             <constraint firstItem="K6L-j7-hhT" firstAttribute="centerY" secondItem="IL8-qM-ahf" secondAttribute="centerY" id="VuP-R4-Rfh"/>
                             <constraint firstItem="F79-oK-chE" firstAttribute="top" secondItem="wa7-QJ-tl0" secondAttribute="bottom" constant="10" id="bgk-Ig-U5T"/>
+                            <constraint firstItem="GuT-zd-oAL" firstAttribute="top" secondItem="F79-oK-chE" secondAttribute="bottom" constant="44" id="dTv-rI-Ure"/>
                             <constraint firstItem="S4P-bQ-pXf" firstAttribute="leading" secondItem="IL8-qM-ahf" secondAttribute="leading" constant="10" id="ewC-xW-Ucu"/>
                             <constraint firstItem="S4P-bQ-pXf" firstAttribute="centerX" secondItem="IL8-qM-ahf" secondAttribute="centerX" id="fuz-24-9LM"/>
                             <constraint firstAttribute="trailing" secondItem="S4P-bQ-pXf" secondAttribute="trailing" constant="10" id="p6V-WG-BW3"/>
                             <constraint firstItem="S4P-bQ-pXf" firstAttribute="top" secondItem="F79-oK-chE" secondAttribute="bottom" constant="105" id="sA2-1n-SvT"/>
+                            <constraint firstAttribute="trailing" secondItem="GuT-zd-oAL" secondAttribute="trailing" constant="10" id="tJe-Rn-4Fo"/>
+                            <constraint firstItem="3K8-ol-hec" firstAttribute="top" secondItem="F79-oK-chE" secondAttribute="bottom" constant="52" id="vJ6-hV-2zr"/>
+                            <constraint firstItem="3K8-ol-hec" firstAttribute="leading" secondItem="IL8-qM-ahf" secondAttribute="leading" constant="15" id="zOi-20-Phs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eAk-dA-DkB"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
+                        <outlet property="colorText" destination="3K8-ol-hec" id="TbQ-C9-oes"/>
+                        <outlet property="isCollectionBtn" destination="GuT-zd-oAL" id="Ehn-bb-dvU"/>
                         <outlet property="label" destination="K6L-j7-hhT" id="zHl-FK-jre"/>
                         <outlet property="nameLabel" destination="S4P-bQ-pXf" id="ykb-tt-3X6"/>
                     </connections>

@@ -7,12 +7,16 @@
 //
 
 #import "SetupFontViewController.h"
+#import "StorageFont.h"
+#import "UIColor+Hex.h"
 
-@interface SetupFontViewController ()
+
+@interface SetupFontViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-
 @property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UITextField *colorText;
+@property (weak, nonatomic) IBOutlet UIButton *isCollectionBtn;
 
 @end
 
@@ -21,15 +25,59 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     self.nameLabel.text = self.fontName;
     self.label.font = [UIFont fontWithName:self.fontName size:20];
+    
+    [self.isCollectionBtn addTarget:self action:@selector(collectionFontName:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self p_setupCollectionBtn];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)p_setupCollectionBtn {
+    StorageFont *storageFont = [StorageFont sharedInstanceStorageFont];
+    NSMutableArray *array = storageFont.fontNames;
+    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *string = (NSString *)obj;
+        if ([string isEqualToString:self.fontName]) {
+            self.isCollectionBtn.selected = YES;
+            
+            *stop = YES;
+        }
+        
+    }];
+}
+
+
+#pragma mark - UITextFieldDelegate 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    self.label.textColor = [UIColor colorWithHexString:textField.text];
+    
+    [textField endEditing:YES];
+    
+    return YES;
+}
+
+
+- (void)collectionFontName:(UIButton *)sender {
+    
+    StorageFont *storageFont = [StorageFont sharedInstanceStorageFont];
+    
+    if (sender.selected) {
+        [storageFont cancelFontName:self.fontName];
+        sender.selected = NO;
+    } else {
+        [storageFont saveFontName:self.fontName];
+        sender.selected = YES;
+    }
+    
+}
+
 
 
 - (IBAction)setupFontSizeAction:(UISlider *)sender {
