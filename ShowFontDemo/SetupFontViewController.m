@@ -13,6 +13,7 @@
 
 @interface SetupFontViewController () <UITextFieldDelegate>
 
+@property (strong, nonatomic) IBOutlet UISlider *setFontSize;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UITextField *colorText;
@@ -27,6 +28,7 @@
     
     self.nameLabel.text = self.fontName;
     self.label.font = [UIFont fontWithName:self.fontName size:20];
+    self.setFontSize.value = 20.0f;
     
     [self.isCollectionBtn addTarget:self action:@selector(collectionFontName:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -84,6 +86,10 @@
     
     self.nameLabel.text = [NSString stringWithFormat:@"%@__%.0f", self.fontName, sender.value];
     self.label.font = [UIFont fontWithName:self.fontName size:sender.value];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
 }
 
 /*

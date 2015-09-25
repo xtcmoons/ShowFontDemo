@@ -8,6 +8,7 @@
 
 #import "collectionViewController.h"
 #import "StorageFont.h"
+#import "SetupFontViewController.h"
 
 @interface collectionViewController ()
 
@@ -49,6 +50,21 @@
     cell.detailTextLabel.text = fontName;
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 60;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    SetupFontViewController *setupVC = [storyboard instantiateViewControllerWithIdentifier:@"SetupFontViewController"];
+
+    setupVC.fontName = self.fontNames[indexPath.row];
+
+    [self.navigationController pushViewController:setupVC animated:YES];
 }
 
 /*
