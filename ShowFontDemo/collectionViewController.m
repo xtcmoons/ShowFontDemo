@@ -46,7 +46,7 @@
     NSString *fontName = self.fontNames[indexPath.row];
     cell.textLabel.font = [UIFont fontWithName:fontName size:20];
     
-    cell.textLabel.text = @"中文字体显示模版，效果";
+    cell.textLabel.text = @"中文字体, Hello world 123456789";
     cell.detailTextLabel.text = fontName;
     
     return cell;

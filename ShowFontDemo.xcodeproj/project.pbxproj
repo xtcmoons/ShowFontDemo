@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B4A9B551BB4481D007D187C /* StorageFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A9B541BB4481D007D187C /* StorageFont.m */; settings = {ASSET_TAGS = (); }; };
-		7B4A9B581BB44D57007D187C /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A9B571BB44D57007D187C /* UIColor+Hex.m */; settings = {ASSET_TAGS = (); }; };
-		7B4A9B5B1BB454AA007D187C /* collectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A9B5A1BB454AA007D187C /* collectionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7B4A9B551BB4481D007D187C /* StorageFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A9B541BB4481D007D187C /* StorageFont.m */; };
+		7B4A9B581BB44D57007D187C /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A9B571BB44D57007D187C /* UIColor+Hex.m */; };
+		7B4A9B5B1BB454AA007D187C /* collectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A9B5A1BB454AA007D187C /* collectionViewController.m */; };
 		7B76C3701BB3005000269089 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B76C36F1BB3005000269089 /* main.m */; };
 		7B76C3731BB3005000269089 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B76C3721BB3005000269089 /* AppDelegate.m */; };
 		7B76C3761BB3005000269089 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B76C3751BB3005000269089 /* ViewController.m */; };
@@ -18,7 +18,7 @@
 		7B76C37E1BB3005000269089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B76C37C1BB3005000269089 /* LaunchScreen.storyboard */; };
 		7B76C3891BB3005000269089 /* ShowFontDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B76C3881BB3005000269089 /* ShowFontDemoTests.m */; };
 		7B76C3941BB3005000269089 /* ShowFontDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B76C3931BB3005000269089 /* ShowFontDemoUITests.m */; };
-		7B76C3A31BB3067500269089 /* SetupFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B76C3A21BB3067500269089 /* SetupFontViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7B76C3A31BB3067500269089 /* SetupFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B76C3A21BB3067500269089 /* SetupFontViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -440,7 +440,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ShowFontDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.XTM.ShowFontDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -453,7 +453,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ShowFontDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.XTM.ShowFontDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
